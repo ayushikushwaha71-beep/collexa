@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-surface-variant": "#c2c6d6", "outline-variant": "#424754", "surface-container-high": "#232a36", "on-tertiary-fixed-variant": "#723600", error: "#ffb4ab", "on-error": "#690005", "secondary-fixed-dim": "#d0bcff", "on-primary": "#002e6a", "on-error-container": "#ffdad6", "tertiary-fixed": "#ffdcc6", "surface-tint": "#adc6ff", "secondary-fixed": "#e9ddff", "error-container": "#93000a", "secondary-container": "#571bc1", "surface-variant": "#2e3541", "on-secondary-container": "#c4abff", "primary-fixed-dim": "#adc6ff", "surface-bright": "#323946", secondary: "#d0bcff", "on-tertiary-fixed": "#311400", "on-surface": "#dce2f3", primary: "#adc6ff", "on-tertiary": "#502400", "on-primary-container": "#00285d", "on-secondary": "#3c0091", "surface-container-highest": "#2e3541", "inverse-primary": "#005ac2", "inverse-surface": "#dce2f3", "primary-container": "#4d8eff", "on-secondary-fixed": "#23005c", surface: "#0c141f", "primary-fixed": "#d8e2ff", "surface-container-low": "#151c27", "surface-dim": "#0c141f", outline: "#8c909f", "on-primary-fixed": "#001a42", "tertiary-fixed-dim": "#ffb786", tertiary: "#ffb786", background: "#0c141f", "surface-container": "#19202b", "tertiary-container": "#df7412", "on-primary-fixed-variant": "#004395", "on-background": "#dce2f3", "on-tertiary-container": "#461f00", "surface-container-lowest": "#070e19", "inverse-on-surface": "#2a313d", "on-secondary-fixed-variant": "#5516be"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {xl: "64px", xs: "4px", base: "8px", md: "24px", lg: "40px", "container-max": "1280px", sm: "12px", gutter: "24px"}, fontFamily: {"display-lg": ["Inter"], "label-md": ["Inter"], "title-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"]}, fontSize: {"display-lg": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], "label-md": ["12px", {lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600"}], "title-lg": ["20px", {lineHeight: "1.4", fontWeight: "500"}], "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "600"}], "body-lg": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "body-md": ["14px", {lineHeight: "1.5", fontWeight: "400"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface shadow-sm h-16">
+<div class="flex items-center justify-between px-md py-base h-full w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary" data-icon="school">school</span>
+<h1 class="font-display-lg text-headline-md font-bold tracking-tight text-primary">Collexa</h1>
+</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-primary font-bold border-b-2 border-primary py-1 font-label-md text-label-md" href="#">Discover</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 px-3 py-1 rounded-lg font-label-md text-label-md" href="#">Compare</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 px-3 py-1 rounded-lg font-label-md text-label-md" href="#">Predictor</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 px-3 py-1 rounded-lg font-label-md text-label-md" href="#">Saved</a>
+</div>
+<div class="flex items-center gap-sm">
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 max-w-container-max mx-auto px-md">
+<!-- Hero & Search Section -->
+<section class="mb-lg">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Find Your Academic Future</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg">Search through 5,000+ top-tier universities globally.</p>
+</div>
+<div class="relative max-w-2xl mx-auto mb-md">
+<div class="absolute inset-y-0 left-0 pl-md flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+</div>
+<input class="block w-full pl-12 pr-md py-4 bg-surface-container-lowest border border-outline-variant rounded-2xl text-body-lg focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all shadow-sm" placeholder="Search by college name, major, or location..." type="text"/>
+</div>
+<!-- Scrollable Filter Bar -->
+<div class="flex items-center gap-sm overflow-x-auto hide-scrollbar py-2 -mx-md px-md">
+<button class="flex items-center gap-xs px-md py-2 bg-primary-container text-on-primary-container rounded-full font-label-md text-label-md shadow-sm whitespace-nowrap active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+                    Location
+                </button>
+<div class="h-8 w-[1px] bg-outline-variant mx-1 shrink-0"></div>
+<div class="flex items-center gap-xs px-md py-2 bg-surface-container-low border border-outline-variant text-on-surface-variant rounded-full font-label-md text-label-md whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]" data-icon="payments">payments</span>
+                    Fees Range
+                    <input class="ml-2 w-24 h-1 bg-outline-variant rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+</div>
+<button class="flex items-center gap-xs px-md py-2 bg-surface-container-low border border-outline-variant text-on-surface-variant rounded-full font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="auto_stories">auto_stories</span>
+                    Courses
+                </button>
+<button class="flex items-center gap-xs px-md py-2 bg-surface-container-low border border-outline-variant text-on-surface-variant rounded-full font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="star">star</span>
+                    Top Rated
+                </button>
+<button class="flex items-center gap-xs px-md py-2 bg-surface-container-low border border-outline-variant text-on-surface-variant rounded-full font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="public">public</span>
+                    International
+                </button>
+</div>
+</section>
+<!-- College Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md mb-xl">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="relative h-48 overflow-hidden">
+<img alt="University Campus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A grand, historic brick university building with gothic architecture and large ivy-covered towers under a soft golden hour sunlight. The campus courtyard is filled with manicured green lawns and professional landscaping, reflecting a prestigious and traditional academic atmosphere in a clean-tech minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7IuHmTxvdwMh5ZfhpGsqnlSRzOZCZuuYE3AhGhz9Vr4_8Ls4Jjem9beNFcAj4Yfvd2_2bvwZpG23yt1hyEKAK7D-lggmu98H3w_b7kin-7aqqHw75mzd-ROclrZRjKvZHDzQRweZjkn_XWOXJaJqdfCsX07qEyZDDldE-bUmOe2A_pjWe636-flSQQh76zriZeZznQjEabqap9y88AKhXIiRG9Ugptn8fR2E8nK7vqqeirjPCrvZrCTtEHxbbovlCNmuQCPE2roA"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.8</span>
+</div>
+</div>
+<div class="p-md">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1">Stanford Institute of Tech</h3>
+<div class="flex items-center gap-xs text-on-surface-variant mb-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="text-body-md font-body-md">Palo Alto, California</span>
+</div>
+<div class="flex justify-between items-center pt-md border-t border-outline-variant">
+<div>
+<p class="text-label-md font-label-md text-outline">EST. FEES</p>
+<p class="text-body-lg font-body-lg font-bold text-primary">$45,000 / yr</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary px-md py-2 rounded-xl font-label-md text-label-md shadow-[0_2px_0_rgba(0,0,0,0.05)] active:scale-95 transition-all">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 2 (Skeleton State) -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm animate-pulse">
+<div class="h-48 bg-surface-container-high"></div>
+<div class="p-md">
+<div class="h-6 w-3/4 bg-surface-container-high rounded-md mb-2"></div>
+<div class="h-4 w-1/2 bg-surface-container-low rounded-md mb-md"></div>
+<div class="flex justify-between items-center pt-md border-t border-outline-variant">
+<div class="space-y-2">
+<div class="h-3 w-12 bg-surface-container-low rounded-md"></div>
+<div class="h-5 w-20 bg-surface-container-high rounded-md"></div>
+</div>
+<div class="h-10 w-24 bg-surface-container-high rounded-xl"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Modern University" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sleek modern university library with expansive floor-to-ceiling glass windows and white minimalist furniture. Bright natural light floods the interior where students are quietly studying. The aesthetic is clean, professional, and forward-thinking, featuring a palette of cool blues and pristine whites typical of a high-end educational SaaS platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlD-1lxgFA3mMNzxZ6HVQYee_UIZu-xpG_mjay8yXCHqfiIfnSmhh8pJN39F0cQvxD3QjD4Hgwn1Wyx_CRrS2D5SDmNJ04UkN-q9foIIzJTxflZEN85BFTeJCOh7MoF_rFkDBEmScJvH9vQCF5yhoXYP_cp33IvJVBljGPXv_pgFw-9nzP-PDKPZACt2VGo8vEmw96wAbHyYLlgFXtAT_edaIoC8_cgzv5qMcczJlPh6cd6KFeaCMl5JY43A9nBlS3WlK4GleyaU4"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.5</span>
+</div>
+</div>
+<div class="p-md">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1">Melbourne Global Academy</h3>
+<div class="flex items-center gap-xs text-on-surface-variant mb-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="text-body-md font-body-md">Melbourne, Australia</span>
+</div>
+<div class="flex justify-between items-center pt-md border-t border-outline-variant">
+<div>
+<p class="text-label-md font-label-md text-outline">EST. FEES</p>
+<p class="text-body-lg font-body-lg font-bold text-primary">$32,000 / yr</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary px-md py-2 rounded-xl font-label-md text-label-md shadow-[0_2px_0_rgba(0,0,0,0.05)] active:scale-95 transition-all">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Urban University" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A contemporary urban college campus featuring glass facades and steel structures amidst a bustling city skyline. The mood is energetic and academic, with students walking between buildings on wide, clean pedestrian paths. Bright daylight and clear blue skies emphasize a professional, high-achieving environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK2dzNclwwIgg2WcDeYQuvuW13ZxIVH2mR7hVHZtBeHLsatgN0i1Q6JA68UR26BV9jRBSqQ3e5Wyr-bUwh2eBmfU0LA8lif19PKhsxW5r1gYJPjXkOpFFDi-yCwGikUwN_NV22ph4KOAhTAlNTxTW32Ii1A4e7ZHc3Y8b2bDfAOL08P1jDXTdGjR8NeGF3kOy_gJNgogxtDrDQFGex-vQAl621WtkP-cixhrGOIIo7l7CGloSUTXEz-kbZvsxKBHBC3l9jC-CSQWc"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.9</span>
+</div>
+</div>
+<div class="p-md">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1">London School of Design</h3>
+<div class="flex items-center gap-xs text-on-surface-variant mb-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="text-body-md font-body-md">London, UK</span>
+</div>
+<div class="flex justify-between items-center pt-md border-t border-outline-variant">
+<div>
+<p class="text-label-md font-label-md text-outline">EST. FEES</p>
+<p class="text-body-lg font-body-lg font-bold text-primary">$28,500 / yr</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary px-md py-2 rounded-xl font-label-md text-label-md shadow-[0_2px_0_rgba(0,0,0,0.05)] active:scale-95 transition-all">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Student Lounge" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A bright, airy student lounge with colorful modular seating and white walls. Large windows look out onto a green campus park. The atmosphere is collaborative and modern, using soft ambient lighting to create a welcoming and productive educational space with a high-end corporate minimalist feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2Ts3FhNltb2282Tgoy-BmKJGwNkbQrzaw9sHGS5vU7KvFokJg1z0xsBn0Mw7SgnwehTP7wvpitaIB3APHMIiq73czzzh-w3dZIePip6zsfQMTQYkPiOfHOYKNoWvZ0AZ6N_Uxq_EnETjdkxcDO6ClCGZgYTqSQVN9R7HOA8vOYhXRhJ30L1ofABATuCHODOmb8nJZokX1SNVe3fGjTe6HTSs5VjhOBW6y7I7B21QrRBdCSGq5MIIaFkttZQF7QYzM0xOQFjBYZRc"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.2</span>
+</div>
+</div>
+<div class="p-md">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1">Singapore Arts College</h3>
+<div class="flex items-center gap-xs text-on-surface-variant mb-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="text-body-md font-body-md">Singapore</span>
+</div>
+<div class="flex justify-between items-center pt-md border-t border-outline-variant">
+<div>
+<p class="text-label-md font-label-md text-outline">EST. FEES</p>
+<p class="text-body-lg font-body-lg font-bold text-primary">$21,000 / yr</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary px-md py-2 rounded-xl font-label-md text-label-md shadow-[0_2px_0_rgba(0,0,0,0.05)] active:scale-95 transition-all">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Lecture Hall" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A wide-angle shot of a grand university lecture hall with rows of wooden desks and modern digital screens. The room is filled with soft, warm lighting that highlights the blend of traditional academic heritage and contemporary technology. The overall image is clean and professionally composed, evoking excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeuy69dVXoF4o6DNBvp2H1PCzdWtkUVmzKnri6mag3ak2bM8NCYn3ZyEC3261t1-fg25fj3TvUsMkEPOh-srs79ueLvF4z3dgj9Q0HeqVZdicVpkDd-9DthFwzYn3vVMyXljZgWg4KwDd_bA7W621Eh8DGhN_4DPdtnX3WtioWbgZ_k9kmWiGt5o5zHlkujgRErOWmSzaQzxC4g0mYpgMQ_Bhj73FfF5JALBzelEusxcM4ihiFUGghzr1PBXDXq-MnpHvobAYyI5g"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.7</span>
+</div>
+</div>
+<div class="p-md">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1">ETH Zurich Science Hub</h3>
+<div class="flex items-center gap-xs text-on-surface-variant mb-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="text-body-md font-body-md">Zurich, Switzerland</span>
+</div>
+<div class="flex justify-between items-center pt-md border-t border-outline-variant">
+<div>
+<p class="text-label-md font-label-md text-outline">EST. FEES</p>
+<p class="text-body-lg font-body-lg font-bold text-primary">$18,000 / yr</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary px-md py-2 rounded-xl font-label-md text-label-md shadow-[0_2px_0_rgba(0,0,0,0.05)] active:scale-95 transition-all">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 h-20 bg-surface border-t border-outline-variant shadow-lg">
+<div class="flex justify-around items-center h-full px-base pb-safe">
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-6 py-2 active:scale-90 transition-transform duration-100">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-label-md text-label-md">Discover</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-90 duration-100 px-4 py-2">
+<span class="material-symbols-outlined" data-icon="compare_arrows">compare_arrows</span>
+<span class="font-label-md text-label-md">Compare</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-90 duration-100 px-4 py-2">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-md text-label-md">Predictor</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-90 duration-100 px-4 py-2">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+<span class="font-label-md text-label-md">Saved</span>
+</button>
+</div>
+</nav>
+<!-- Floating Action Button - Contextual -->
+<button class="fixed right-6 bottom-24 md:bottom-10 bg-primary text-on-primary w-14 h-14 rounded-2xl shadow-xl flex items-center justify-center active:scale-95 transition-transform group">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="absolute right-full mr-4 bg-inverse-surface text-inverse-on-surface px-3 py-1 rounded-lg text-body-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Talk to Advisor</span>
+</button>
+</body></html>

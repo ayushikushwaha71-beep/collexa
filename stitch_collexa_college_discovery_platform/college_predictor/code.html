@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-surface-variant": "#c2c6d6", "outline-variant": "#424754", "surface-container-high": "#232a36", "on-tertiary-fixed-variant": "#723600", error: "#ffb4ab", "on-error": "#690005", "secondary-fixed-dim": "#d0bcff", "on-primary": "#002e6a", "on-error-container": "#ffdad6", "tertiary-fixed": "#ffdcc6", "surface-tint": "#adc6ff", "secondary-fixed": "#e9ddff", "error-container": "#93000a", "secondary-container": "#571bc1", "surface-variant": "#2e3541", "on-secondary-container": "#c4abff", "primary-fixed-dim": "#adc6ff", "surface-bright": "#323946", secondary: "#d0bcff", "on-tertiary-fixed": "#311400", "on-surface": "#dce2f3", primary: "#adc6ff", "on-tertiary": "#502400", "on-primary-container": "#00285d", "on-secondary": "#3c0091", "surface-container-highest": "#2e3541", "inverse-primary": "#005ac2", "inverse-surface": "#dce2f3", "primary-container": "#4d8eff", "on-secondary-fixed": "#23005c", surface: "#0c141f", "primary-fixed": "#d8e2ff", "surface-container-low": "#151c27", "surface-dim": "#0c141f", outline: "#8c909f", "on-primary-fixed": "#001a42", "tertiary-fixed-dim": "#ffb786", tertiary: "#ffb786", background: "#0c141f", "surface-container": "#19202b", "tertiary-container": "#df7412", "on-primary-fixed-variant": "#004395", "on-background": "#dce2f3", "on-tertiary-container": "#461f00", "surface-container-lowest": "#070e19", "inverse-on-surface": "#2a313d", "on-secondary-fixed-variant": "#5516be"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {xl: "64px", xs: "4px", base: "8px", md: "24px", lg: "40px", "container-max": "1280px", sm: "12px", gutter: "24px"}, fontFamily: {"display-lg": ["Inter"], "label-md": ["Inter"], "title-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"]}, fontSize: {"display-lg": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], "label-md": ["12px", {lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600"}], "title-lg": ["20px", {lineHeight: "1.4", fontWeight: "500"}], "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "600"}], "body-lg": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "body-md": ["14px", {lineHeight: "1.5", fontWeight: "400"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface shadow-sm h-16">
+<div class="flex items-center justify-between px-md py-base h-full w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary" data-icon="school">school</span>
+<span class="font-display-lg text-headline-md font-bold tracking-tight text-primary">Collexa</span>
+</div>
+<nav class="hidden md:flex items-center space-x-lg h-full">
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 px-base py-xs rounded-lg" href="#">Discover</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 px-base py-xs rounded-lg" href="#">Compare</a>
+<a class="text-primary font-bold border-b-2 border-primary h-full flex items-center" href="#">Predictor</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 px-base py-xs rounded-lg" href="#">Saved</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="material-symbols-outlined text-on-surface-variant p-base hover:bg-surface-container-low rounded-full active:scale-95 transition-all" data-icon="account_circle">account_circle</button>
+</div>
+</div>
+</header>
+<main class="mt-xl pt-lg px-md max-w-container-max mx-auto">
+<!-- Hero & Form Section -->
+<section class="max-w-2xl mx-auto mb-xl text-center">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-base">College Admission Predictor</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Enter your exam details to see which top institutions are within your reach for the upcoming session.</p>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-[0px_4px_20px_rgba(0,0,0,0.03)] text-left">
+<div class="space-y-md">
+<!-- Exam Selection -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-xs ml-base">Select Exam Type</label>
+<div class="relative">
+<select class="w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-lg px-md appearance-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-body-md">
+<option>JEE (Main)</option>
+<option>JEE (Advanced)</option>
+<option>NEET</option>
+<option>BITSAT</option>
+<option>GATE</option>
+</select>
+<span class="material-symbols-outlined absolute right-md top-1/2 -translate-y-1/2 pointer-events-none text-outline" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+</div>
+<!-- Rank Input -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-xs ml-base">Enter Your Rank</label>
+<input class="w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-lg px-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-body-md" placeholder="e.g. 15420" type="number"/>
+</div>
+<!-- CTA Button -->
+<button class="w-full h-14 primary-gradient text-on-primary font-bold rounded-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-base">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                        Predict My College
+                    </button>
+</div>
+</div>
+</section>
+<!-- Results Section -->
+<section class="mb-xl">
+<div class="flex items-center justify-between mb-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface">Recommended for You</h2>
+<div class="flex gap-base">
+<button class="bg-surface border border-outline-variant px-md py-base rounded-full text-body-md text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="filter_list">filter_list</span>
+                        Filters
+                    </button>
+</div>
+</div>
+<!-- Bento/Grid of Result Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- College Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl transition-all group">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A grand university campus featuring classical brick architecture, lush green quadrangles, and students walking between classes under a clear blue sky. The lighting is bright and professional, emphasizing a prestigious academic atmosphere with clean lines and high-contrast visuals aligned with a premium SaaS aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzhaRkvXbZlNRgtV9FxEyLLQAi03v1lJI5fwgcizzhUVAO0toPqHRRYxD2V5XWoXwOxCtMarB-hepRW4umZLdB-Zj4575aLol7zIB8QQ6AcH4vx6kPJfTlKF3xYY2w4mUbomPUtPQpombuwmvRnDqdIJN3_5F4-UdUR3AZVYbSIJHODUITIHX0maMpQWWw5ays8towSPW1JIv6orM0aD1hCQOfaI5Z3EapA7OnAiZCW0CA95P_4v9vnY8YwL1AR-27ZXNB6cLZxas"/>
+<div class="absolute top-md right-md">
+<button class="bg-surface/80 backdrop-blur-md p-base rounded-full text-primary hover:bg-primary hover:text-white transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+<div class="p-md">
+<div class="flex justify-between items-start mb-base">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Indian Institute of Technology, Bombay</h3>
+<p class="text-on-surface-variant font-body-md">Mumbai, India</p>
+</div>
+</div>
+<div class="flex gap-xs mb-md">
+<span class="bg-surface-container-high text-on-surface-variant px-sm py-1 rounded-full text-label-md">Tier 1</span>
+<span class="bg-surface-container-high text-on-surface-variant px-sm py-1 rounded-full text-label-md">Public</span>
+</div>
+<div class="border-t border-outline-variant pt-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-label-md text-on-surface-variant uppercase">Success Rate</span>
+<span class="text-primary font-bold text-headline-md">92%</span>
+</div>
+<button class="text-primary font-bold hover:underline transition-all">View Cutoffs</button>
+</div>
+</div>
+</div>
+<!-- College Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl transition-all group">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern glass-facade engineering building at a tech university, reflecting a vibrant sunset. The architecture is sharp and contemporary, symbolizing innovation and academic excellence. The overall mood is aspirational and clean, following a minimalist corporate style with spacious framing and high-quality digital photography standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgv_FSIQbG7-ICJtTVsXWh13VH5UsqqN_VIW6RXD1AoYiI_3KLWVce27yKlY1UtPbZuhrNKHT47Jb9FUCmGOeIN-sdL5ykCPc5k_RBfI8vj1Xy8gF-7uNe671mpsG-CTlTj4YhWEXxubRuguqUwrip0wxqb2jTXZpc59dNrR3bGOlqfOIB2jne3ID8nl449nrjY-oGxsgvSwxjQkezodGhvdiyPwHu_9VaHogIswFFjYntmB_mu8g0__8FKB81511HUKGcmy3WxPY"/>
+<div class="absolute top-md right-md">
+<button class="bg-surface/80 backdrop-blur-md p-base rounded-full text-primary hover:bg-primary hover:text-white transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+<div class="p-md">
+<div class="flex justify-between items-start mb-base">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Delhi Technological University</h3>
+<p class="text-on-surface-variant font-body-md">New Delhi, India</p>
+</div>
+</div>
+<div class="flex gap-xs mb-md">
+<span class="bg-surface-container-high text-on-surface-variant px-sm py-1 rounded-full text-label-md">Tier 1</span>
+<span class="bg-surface-container-high text-on-surface-variant px-sm py-1 rounded-full text-label-md">Top 100</span>
+</div>
+<div class="border-t border-outline-variant pt-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-label-md text-on-surface-variant uppercase">Success Rate</span>
+<span class="text-primary font-bold text-headline-md">78%</span>
+</div>
+<button class="text-primary font-bold hover:underline transition-all">View Cutoffs</button>
+</div>
+</div>
+</div>
+<!-- College Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl transition-all group">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A tranquil university library with vast bookshelves and students focused on their digital tablets and notebooks. Soft, natural light pours through large windows, creating a peaceful and productive atmosphere. The scene is shot with a shallow depth of field, highlighting the quiet intensity of academic pursuit in a modern, well-designed learning space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6PrIeHOrItuM3GbtdpFOsTHH4XcwfLneVMe6c1YwGMmUVm3gQzpMAzh1mahv1iDhItp2CAvm-I4kiIxxdydXXQO3h0gCkpP3vGNsSghyFg8zKaJ71w9mpV0krHTLmLcrWB6fvpPMtW-2YnEsvGU8VgeXFhMgxZx62jNXarDHh3MYhEo3IngxHCfdB6YSa3Xr83mrxpG5bCgfXcvRV2mr2O4Hz6-6gV61R5gSnzEUIG0F0tfz0nS9sVBhQnlL7uGeZDlM4gPNONDA"/>
+<div class="absolute top-md right-md">
+<button class="bg-surface/80 backdrop-blur-md p-base rounded-full text-primary hover:bg-primary hover:text-white transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+<div class="p-md">
+<div class="flex justify-between items-start mb-base">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">NIT Tiruchirappalli</h3>
+<p class="text-on-surface-variant font-body-md">Tamil Nadu, India</p>
+</div>
+</div>
+<div class="flex gap-xs mb-md">
+<span class="bg-surface-container-high text-on-surface-variant px-sm py-1 rounded-full text-label-md">Tier 1</span>
+<span class="bg-surface-container-high text-on-surface-variant px-sm py-1 rounded-full text-label-md">NIT</span>
+</div>
+<div class="border-t border-outline-variant pt-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-label-md text-on-surface-variant uppercase">Success Rate</span>
+<span class="text-primary font-bold text-headline-md">85%</span>
+</div>
+<button class="text-primary font-bold hover:underline transition-all">View Cutoffs</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-md mb-xl">
+<div class="bg-primary-container p-md rounded-xl text-on-primary-container">
+<span class="material-symbols-outlined mb-base" data-icon="group">group</span>
+<h4 class="font-title-lg text-title-lg mb-xs">50k+ Predictions</h4>
+<p class="font-body-md opacity-90">Students helped in the last 30 days for various national entrance exams.</p>
+</div>
+<div class="bg-secondary-container p-md rounded-xl text-on-secondary-container">
+<span class="material-symbols-outlined mb-base" data-icon="verified">verified</span>
+<h4 class="font-title-lg text-title-lg mb-xs">98% Accuracy</h4>
+<p class="font-body-md opacity-90">Based on historical admission data from the last 10 academic cycles.</p>
+</div>
+<div class="bg-tertiary-container p-md rounded-xl text-on-tertiary-container">
+<span class="material-symbols-outlined mb-base" data-icon="map">map</span>
+<h4 class="font-title-lg text-title-lg mb-xs">400+ Institutions</h4>
+<p class="font-body-md opacity-90">Across India including IITs, NITs, and top private universities.</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 h-20 bg-surface border-t border-outline-variant shadow-lg flex justify-around items-center px-base pb-safe">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high px-4 py-2 transition-all">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-label-md text-label-md">Discover</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high px-4 py-2 transition-all">
+<span class="material-symbols-outlined" data-icon="compare_arrows">compare_arrows</span>
+<span class="font-label-md text-label-md">Compare</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-6 py-2 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-md text-label-md">Predictor</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high px-4 py-2 transition-all">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+<span class="font-label-md text-label-md">Saved</span>
+</button>
+</nav>
+</body></html>
